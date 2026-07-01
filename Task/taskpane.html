@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; margin: 0; padding: 12px; color: #222; }
+    label { display: block; margin: 10px 0 3px; font-weight: 600; }
+    input, select, textarea { width: 100%; box-sizing: border-box; padding: 6px; font-size: 13px; }
+    button { margin-top: 14px; padding: 8px 16px; font-size: 13px; background: #0078d4; color: #fff; border: 0; border-radius: 3px; cursor: pointer; }
+    button:disabled { background: #9bb8d6; }
+    #msg { margin-top: 12px; min-height: 18px; }
+    .ok { color: #107c10; } .err { color: #d13438; }
+  </style>
+</head>
+<body>
+  <label>Task</label>
+  <textarea id="task" rows="3"></textarea>
+
+  <label>Job / Category</label>
+  <input id="job" placeholder="Estimating, PayAPP, or a job number"/>
+
+  <label>Created by</label>
+  <select id="createdBy"></select>
+
+  <label>Assigned to</label>
+  <select id="assignedTo"></select>
+
+  <label>Due date/time (optional)</label>
+  <input id="due" type="datetime-local"/>
+
+  <button id="add" disabled>Add task</button>
+  <div id="msg"></div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>
